@@ -1,0 +1,142 @@
+nav.dark + section.contact {
+    background-color: var(--darkBc);
+    color: var(--baccolor);
+}
+
+section.contact {
+    min-height: 100vh;
+    color: var(--titlecolor);
+    padding: 20px 120px;
+}
+
+section.contact h1 {
+    font-family: "Pacifico";
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* contact */
+
+.contact form {
+    width: 100%;
+}
+
+.contact form .form-control {
+    position: relative;
+    margin: 30px 0;
+}
+
+.contact form .form-control input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--thumbcolor);
+    display: block;
+    color: var(--forecolor);
+}
+
+.contact form .form-control input:focus,
+.contact form .form-control input:valid {
+    outline: none;
+    border-bottom-color: var(--forecolor);
+}
+
+.contact form .form-control input:focus + label span,
+.contact form .form-control input:valid + label span {
+    color: var(--forecolor);
+    transform: translateY(-30px);
+}
+
+.contact form .form-control label {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    cursor: pointer;
+}
+
+.contact form .form-control label span {
+    display: inline-block;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+nav.dark + .contact form button {
+    color: var(--baccolor);
+}
+
+.contact form button {
+    width: 330px;
+    height: 50px;
+    margin: 0 0 20px 0;
+    border: solid 1px var(--thumbcolor);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--titlecolor);
+}
+
+.contact form button:active {
+    transform: scale(0.98);
+}
+
+.isi-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.isi-form blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.isi-form textarea {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--baccolor);
+    color: var(--titlecolor);
+}
+
+@media (max-width: 1000px) {
+    section.contact {
+        padding: 0px 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    section.contact {
+        padding: 0px 50px;
+    }
+    .isi-form {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    section.contact {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    textarea {
+        width: 90%;
+    }
+    .contact form button {
+        width: 100%;
+    }
+
+    .contact form .form-control input {
+        width: 100%;
+    }
+}

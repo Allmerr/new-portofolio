@@ -1,0 +1,67 @@
+:root {
+    --baccolor: #f0eef2;
+    --forecolor: #a8a3b2;
+    --titlecolor: #7f7888;
+    --thumbcolor: #a8a3b273;
+    --darkBc: #2c3639;
+    --line-fill: hsla(51, 100%, 49%, 0.404);
+}
+
+nav.dark + .loading {
+    background-color: var(--darkBc);
+    color: var(--baccolor);
+}
+
+.loading {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#cursor.dark {
+    border-color: var(--baccolor);
+}
+
+#cursor {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: solid 1px var(--darkBc);
+    position: absolute;
+    z-index: 99;
+    animation: animCursor 2s infinite alternate;
+    pointer-events: none;
+}
+
+#cursor::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: solid 1px gray;
+    animation: animCursor2 2s infinite alternate;
+    top: -5px;
+    left: -5px;
+}
+
+@keyframes animCursor {
+    0% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animCursor2 {
+    0% {
+        transform: scale(0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
